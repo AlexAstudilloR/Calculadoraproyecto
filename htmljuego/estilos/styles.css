@@ -199,3 +199,9 @@ main{
     transform: scale(1.1);
     transition:all .0.2s;
 }
+.ganadores-tabla{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

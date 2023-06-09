@@ -22,6 +22,11 @@ class Juego{
         this.reglas=document.querySelector(".reglas");
         this.regresar=document.querySelectorAll(".volver");
         this.extra=document.querySelector(".more-content");
+        this.winuser=document.querySelector("#winuser");
+        this.winpc=document.querySelector("#winpc");
+        this.pwinu=0;
+        this.pwinp=0;
+        this.ganadores=document.querySelector(".ganadores-tabla");
     }
     //Metodos
     Iniciarturno(e){
@@ -73,10 +78,14 @@ class Juego{
         if (this.puntoUsuario ===5){
             obj.instrucciones.innerText="🔥 Ganaste el juego 🔥"
             obj.reiniciar.classList.remove("disabled");
+            this.pwinu=this.pwinu+1
+            this.winuser.innerText=this.pwinu
             obj.arma.classList.add("disabled");
         }else if(this.puntoPc ===5){
             obj.instrucciones.innerText="😱 La computadora ganó 😱"
             obj.reiniciar.classList.remove("disabled");
+            this.pwinp=this.pwinp+1
+            this.winpc.innerText=this.pwinp
             obj.arma.classList.add("disabled");
          }
     }
@@ -92,6 +101,7 @@ class Juego{
     }
     juegonuevo(){
         obj.menu.classList.add("disabled");
+        obj.ganadores.classList.remove("disabled");
         obj.juego.classList.remove("disabled");
     }
     mostrarReglas(){
@@ -103,6 +113,7 @@ class Juego{
         obj.juego.classList.add("disabled");
         obj.reglas.classList.add("disabled");
         obj.extra.classList.add("disabled");
+        obj.ganadores.classList.add("disabled");
     }
     mostrarProyectos(){
         obj.menu.classList.add("disabled");
