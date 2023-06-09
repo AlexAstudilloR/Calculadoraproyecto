@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+header {
+    background-color: #995393;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .navbar-nav li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navbar-nav li a:hover {
+    color: #566;
+ }
+
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    background-color:rebeccapurple;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    animation: text 5s linear infinite;
+}
+@keyframes text{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+
+body {
+    min-height: 100vh;
+    background-color: rgb(128, 96, 160);
+    display: grid;
+    place-items: center;
+    background-image: url("cbr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+}
+
+.calculadora{
+    background-color:rgb(10, 36, 36) ;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    gap: 0.5rem;
+    
+}
+
+.pantalla{
+    grid-column: 1/-1;
+    background-color: rgb(80, 167, 138);
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: rgb(173, 154, 45) ;
+    color:rgb(102, 29, 29) ;
+    border: 0;
+    padding: 1.5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: aquamarine ;
+
+}
+
+#cero{
+    grid-column: span 2;
+
+}
+
+#igual{
+    grid-row: span 2;
+    background-color: rgb(182, 47, 47);
+}
+
+#igual:hover{
+    background-color: rgb(47, 162, 182);
+}
+
